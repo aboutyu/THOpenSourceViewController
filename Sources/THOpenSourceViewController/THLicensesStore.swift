@@ -28,7 +28,7 @@ open class THLicensesStore {
     
     private let licenseURL = URL(string: "https://api.github.com/licenses")
     
-    init() {}
+    public init() {}
     
     private func getRequest(_ url: URL) -> URLRequest {
         var request = URLRequest(url: url)

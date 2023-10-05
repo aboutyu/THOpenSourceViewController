@@ -7,7 +7,7 @@
 
 import Foundation
 
-open struct THLicenseDetailEntity: Codable {
+public struct THLicenseDetailEntity: Codable {
     var key, name, spdxID: String?
     var url: String?
     var nodeID: String?

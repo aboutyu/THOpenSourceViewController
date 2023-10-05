@@ -7,7 +7,7 @@
 
 import Foundation
 
-open enum THLicensesKey: String, Codable {
+public enum THLicensesKey: String, Codable {
     case agpl3 = "agpl-3.0"
     case apache2 = "apache-2.0"
     case bsd2clause = "bsd-2-clause"

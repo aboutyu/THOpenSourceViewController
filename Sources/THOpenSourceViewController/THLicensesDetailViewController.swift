@@ -19,7 +19,7 @@ open class THLicensesDetailViewController: UIViewController {
         return textView
     }()
 
-    init(item: THLicensesKeyEntity, license: THLicensesEntity?) {
+    public init(item: THLicensesKeyEntity, license: THLicensesEntity?) {
         self.item = item
         self.license = license
         super.init(nibName: nil, bundle: nil)

@@ -18,7 +18,7 @@ open class THOpenSourceViewController: UIViewController {
     private var navigationTitle: String = "Open Source Licenses"
     private var items: [THLicensesKeyEntity] = []
     
-    init(_ items: [THLicensesKeyEntity], title: String? = nil) {
+    public init(_ items: [THLicensesKeyEntity], title: String? = nil) {
         self.items = items.sorted { $0.name < $1.name }
         self.navigationTitle = title ?? self.navigationTitle
         super.init(nibName: nil, bundle: nil)

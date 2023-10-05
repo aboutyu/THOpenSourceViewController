@@ -7,14 +7,14 @@
 
 import Foundation
 
-open struct THLicensesKeyEntity {
+public struct THLicensesKeyEntity {
     var name: String
     var license: THLicensesKey
     var licenseText: String?
     var year: String?
     var licenseName: String?
     
-    init(name: String,
+    public init(name: String,
          license: THLicensesKey,
          licenseText: String? = nil,
          year: String? = nil,
