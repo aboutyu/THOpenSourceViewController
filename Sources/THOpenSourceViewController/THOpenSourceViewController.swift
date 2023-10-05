@@ -19,7 +19,10 @@ open class THOpenSourceViewController: UIViewController {
     private var items: [THLicensesKeyEntity] = []
     
     public init(_ items: [THLicensesKeyEntity], title: String? = nil) {
-        self.items = items.sorted { $0.name < $1.name }
+        var licenses = items
+        licenses.append(THLicensesKeyEntity(name: "THOpenSourceViewController", license: .mit, year: "2023", licenseName: "Taehun Yu"))
+        
+        self.items = licenses.sorted { $0.name < $1.name }
         self.navigationTitle = title ?? self.navigationTitle
         super.init(nibName: nil, bundle: nil)
     }
