@@ -4,7 +4,7 @@
 
 import UIKit
 
-class THLicensesDetailViewController: UIViewController {
+open class THLicensesDetailViewController: UIViewController {
     private let item: THLicensesKeyEntity
     private var license: THLicensesEntity?
     private var store = THLicensesStore()
@@ -26,11 +26,11 @@ class THLicensesDetailViewController: UIViewController {
         self.title = self.item.name
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         self.view.backgroundColor = UIColor.white
         self.textView.frame = self.view.bounds
         self.textView.contentOffset = .zero

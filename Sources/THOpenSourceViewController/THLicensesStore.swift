@@ -4,7 +4,7 @@
 
 import Foundation
 
-enum THLicensesError: Error {
+public enum THLicensesError: Error {
     case offlineStatus
     case parsingError
     case error(Error)
@@ -24,7 +24,7 @@ enum THLicensesError: Error {
     }
 }
 
-class THLicensesStore {
+open class THLicensesStore {
     
     private let licenseURL = URL(string: "https://api.github.com/licenses")
     
@@ -60,7 +60,7 @@ class THLicensesStore {
                 do {
                     let entity = try decoder.decode([THLicensesEntity].self, from: data)
                     completion(.success(entity))
-                } catch let error {
+                } catch {
                     completion(.failure(THLicensesError.parsingError))
                 }
                 return
@@ -97,7 +97,7 @@ class THLicensesStore {
                 do {
                     let entity = try decoder.decode(THLicenseDetailEntity.self, from: data)
                     completion(.success(entity))
-                } catch let error {
+                } catch {
                     completion(.failure(THLicensesError.parsingError))
                 }
                 return

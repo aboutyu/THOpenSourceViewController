@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct THLicensesKeyEntity {
+open struct THLicensesKeyEntity {
     var name: String
     var license: THLicensesKey
     var licenseText: String?
