@@ -20,7 +20,7 @@ open class THOpenSourceViewController: UIViewController {
     
     public init(_ items: [THLicensesKeyEntity], title: String? = nil) {
         var licenses = items
-        licenses.append(THLicensesKeyEntity(name: "THOpenSourceViewController", license: .mit, year: "2023", licenseName: "Taehun Yu"))
+        licenses.append(THLicensesKeyEntity(name: "THOpenSourceViewController", license: .mit, year: "2023", licenseName: "James, Yu"))
         
         self.items = licenses.sorted { $0.name < $1.name }
         self.navigationTitle = title ?? self.navigationTitle

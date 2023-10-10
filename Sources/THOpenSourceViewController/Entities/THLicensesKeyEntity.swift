@@ -13,17 +13,20 @@ public struct THLicensesKeyEntity {
     var licenseText: String?
     var year: String?
     var licenseName: String?
+    var url: String?
     
     public init(name: String,
-         license: THLicensesKey,
-         licenseText: String? = nil,
-         year: String? = nil,
-         licenseName: String? = nil) {
+                license: THLicensesKey,
+                licenseText: String? = nil,
+                year: String? = nil,
+                licenseName: String? = nil,
+                url: String? = nil) {
         self.name = name
         self.license = license
         self.licenseText = licenseText
         self.year = year
         self.licenseName = licenseName
+        self.url = url
     }
     
     var yearToString: String {
