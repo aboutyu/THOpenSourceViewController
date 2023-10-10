@@ -98,6 +98,10 @@ extension THOpenSourceViewController: UITableViewDelegate, UITableViewDataSource
         tableView.deselectRow(at: indexPath, animated: false)
         let item = items[indexPath.row]
         let entity: THLicensesEntity? = {
+            if item.license == .unknown {
+                return THLicensesEntity(key: .unknown, name: item.name, spdxID: "", url: item.url ?? "", nodeID: "")
+            }
+            
             let entity = license.firstIndex(where: {$0.key == item.license})
             if let index = entity, index < license.count {
                 return license[index]
